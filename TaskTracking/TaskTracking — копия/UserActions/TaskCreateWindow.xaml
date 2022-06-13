@@ -1,0 +1,95 @@
+﻿<Window x:Class="TaskTracking.UserActions.TaskCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskTracking.UserActions"
+        mc:Ignorable="d"
+        Height="500"
+        Width="300"
+        Title="Задача">
+    <Grid>
+        <ScrollViewer>
+
+            <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Left">
+
+
+                <TextBlock 
+                Text="Создание задачи"
+                     Width="250"
+                VerticalAlignment="Center"
+                Margin="10"/>
+
+                <Button Name="addFilesButton"
+                        Click="addFilesButton_Click"
+                         Height="30"
+                         Margin="10, 0, 10, 10"
+                        Content="Выбрать файлы"
+                        />
+
+                <TextBlock Text="Наименование"
+                           Margin="10"/>
+
+                <TextBox Name="nameTextBox"
+                         Height="30"
+                         Margin="10, 0, 10, 10"/>
+
+                <TextBlock Text="Описание"
+                           Margin="10"/>
+
+                <TextBox Name="descTextBox"
+                         TextWrapping="WrapWithOverflow"
+                         VerticalScrollBarVisibility="Auto"
+                         Height="100"
+                         Margin="10, 0, 10, 10"/>
+
+                <TextBlock Text="Приоритет"
+                           Margin="10"/>
+
+                <ComboBox Name="priorityComboBox"
+                          DisplayMemberPath="DisplayMember"
+                          SelectedValuePath="Value"
+                         Height="30"
+                         Margin="10, 0, 10, 10"/>
+
+                <TextBlock Text="Статус"
+                           Margin="10"
+                           Visibility="Collapsed"
+                           Name="statusTextBlock"/>
+
+                <ComboBox Name="statusComboBox"
+                          DisplayMemberPath="DisplayMember"
+                          SelectedValuePath="Value"
+                          Visibility="Collapsed"
+                         Height="30"
+                         Margin="10, 0, 10, 10"/>
+
+                <TextBlock Text="Исполнитель"
+                           Margin="10"/>
+
+                <ComboBox Name="executorComboBox"
+                          DisplayMemberPath="Name"
+                        SelectedValuePath="Id"
+                         Height="30"
+                         Margin="10, 0, 10, 10"/>
+
+                <TextBlock Text="Доска"
+                           Margin="10"/>
+
+                <ComboBox Name="boardComboBox"
+                          DisplayMemberPath="Name"
+                        SelectedValuePath="Id"
+                         Height="30"
+                         Margin="10, 0, 10, 10"/>
+
+                <Button Name="saveButton"
+                        Height="30"
+                        Margin="10"
+                        Content="Сохранить"/>
+
+            </StackPanel>
+
+        </ScrollViewer>
+    </Grid>
+</Window>
